@@ -15,8 +15,8 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  overflow-x: hidden; /* Menghindari scroll horizontal */
-  background: black; /* Background untuk memastikan tampilan */
+  overflow-x: hidden;
+  background: black;
 }
 
 .video-background {
@@ -33,7 +33,7 @@ video {
   width: 100vw;
   height: 100vh;
   object-fit: cover;
-  border-radius: 0; /* Ubah sesuai keinginan jika radius diperlukan */
+  border-radius: 0;
 }
 
 .container {
@@ -43,23 +43,23 @@ video {
   border-radius: 15px;
   box-shadow: 0 8px 30px rgba(138, 43, 226, 0.5);
   max-width: 90%;
-  width: 400px; /* Mengurangi lebar kontainer */
+  width: 400px;
   margin: 20px auto;
-  opacity: 0; /* Mulai dengan opacity 0 untuk animasi masuk */
+  opacity: 0;
   animation: fadeIn 1s ease-out forwards;
   position: relative;
-  overflow: hidden; /* Memungkinkan scroll jika konten lebih besar dari kontainer */
-  padding-bottom: 120px; /* Memberikan ruang untuk footer */
+  overflow: hidden;
+  padding-bottom: 150px; /* Memberikan ruang ekstra untuk footer */
 }
 
 .logo {
-  width: 60%; /* Mengurangi ukuran logo */
+  width: 60%;
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
   border: 3px solid #ff00ff;
   position: relative;
-  animation: pulse 2s infinite; /* Animasi pulsasi untuk logo */
+  animation: pulse 2s infinite;
 }
 
 .logo::before {
@@ -79,7 +79,7 @@ video {
 
 h1 {
   margin-bottom: 20px;
-  font-size: 2rem; /* Mengurangi ukuran font */
+  font-size: 2rem;
   letter-spacing: 3px;
   color: #e600ff;
   text-shadow: 0 0 8px rgba(230, 0, 255, 0.8), 0 0 15px rgba(230, 0, 255, 0.5);
@@ -89,25 +89,25 @@ h1 {
 .links {
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Jarak antar tombol */
+  gap: 10px;
 }
 
 .link {
   text-decoration: none;
   background-color: rgba(51, 0, 102, 0.8);
   color: #e600ff;
-  padding: 12px; /* Mengurangi padding */
+  padding: 12px;
   border-radius: 5px;
-  font-size: 1rem; /* Mengurangi ukuran font tombol */
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   border: 2px solid #ff00ff;
   box-shadow: 0 0 10px rgba(230, 0, 255, 0.5), 0 0 15px rgba(230, 0, 255, 0.3);
-  transform: translateX(-20px); /* Mulai dari kiri */
-  opacity: 0; /* Mulai dengan opacity 0 */
-  animation: slideInLeft 0.5s ease-out forwards; /* Animasi masuk dari kiri */
+  transform: translateX(0); /* Menghilangkan transform awal */
+  opacity: 1; /* Mengatur opacity menjadi 1 */
+  animation: slideInLeft 0.5s ease-out forwards;
 }
 
 .link:nth-child(1) { animation-delay: 0.2s; }
@@ -132,11 +132,11 @@ h1 {
 
 .footer-text {
   position: absolute;
-  bottom: 80px; /* Menambahkan jarak dari bawah */
+  bottom: 80px;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 40px); /* Menghindari teks terpotong pada layar kecil */
-  font-size: 0.8rem; /* Mengurangi ukuran font footer */
+  width: calc(100% - 40px);
+  font-size: 0.9rem; /* Mengurangi ukuran font sedikit */
   color: #e600ff;
   text-shadow: 0 0 8px rgba(230, 0, 255, 0.8), 0 0 15px rgba(230, 0, 255, 0.5);
   text-align: center;
@@ -153,4 +153,46 @@ h1 {
   width: 100%;
   height: auto;
   border-radius: 0 0 15px 15px;
+}
+
+/* Animasi */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 8px rgba(230, 0, 255, 0.8);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(230, 0, 255, 0.5);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
