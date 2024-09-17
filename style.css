@@ -42,14 +42,14 @@ video {
   border-radius: 15px;
   box-shadow: 0 8px 30px rgba(138, 43, 226, 0.5);
   max-width: 90%;
-  width: 500px;
-  margin: 20px auto; /* Menambahkan margin untuk memudahkan scroll */
+  width: 400px; /* Mengurangi lebar kontainer */
+  margin: 20px auto;
   opacity: 0; /* Mulai dengan opacity 0 untuk animasi masuk */
   animation: fadeIn 1s ease-out forwards;
 }
 
 .logo {
-  width: 50%;
+  width: 60%; /* Mengurangi ukuran logo */
   height: auto;
   border-radius: 50%;
   margin-bottom: 20px;
@@ -75,7 +75,7 @@ video {
 
 h1 {
   margin-bottom: 20px;
-  font-size: 2.5rem;
+  font-size: 2rem; /* Mengurangi ukuran font */
   letter-spacing: 3px;
   color: #e600ff;
   text-shadow: 0 0 8px rgba(230, 0, 255, 0.8), 0 0 15px rgba(230, 0, 255, 0.5);
@@ -92,9 +92,9 @@ h1 {
   text-decoration: none;
   background-color: rgba(51, 0, 102, 0.8);
   color: #e600ff;
-  padding: 15px;
+  padding: 12px; /* Mengurangi padding */
   border-radius: 5px;
-  font-size: 1.1rem;
+  font-size: 1rem; /* Mengurangi ukuran font tombol */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,16 +171,16 @@ h1 {
   }
 
   .logo {
-    width: 40%;
+    width: 50%; /* Mengurangi ukuran logo di perangkat kecil */
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.5rem; /* Mengurangi ukuran font judul di perangkat kecil */
   }
 
   .link {
-    font-size: 1rem;
-    padding: 10px;
+    font-size: 0.9rem; /* Mengurangi ukuran font tombol di perangkat kecil */
+    padding: 10px; /* Mengurangi padding di perangkat kecil */
   }
 
   .icon {
