@@ -131,15 +131,15 @@ h1 {
 
 .footer-text {
   position: absolute;
-  bottom: 0;
+  bottom: 10px; /* Menambahkan jarak dari bawah */
   left: 50%;
   transform: translateX(-50%);
   width: calc(100% - 40px); /* Menghindari teks terpotong pada layar kecil */
-  font-size: 1rem; /* Mengatur ukuran font footer */
+  font-size: 0.8rem; /* Mengurangi ukuran font footer */
   color: #e600ff;
   text-shadow: 0 0 8px rgba(230, 0, 255, 0.8), 0 0 15px rgba(230, 0, 255, 0.5);
-  margin: 10px 0;
   text-align: center;
+  margin: 10px 0;
 }
 
 @keyframes fadeIn {
@@ -195,7 +195,7 @@ h1 {
   }
 
   .link {
-    font-size: 0.9rem; /* Mengurangi ukuran font tombol di perangkat kecil */
+    font-size: 0.8rem; /* Mengurangi ukuran font tombol di perangkat kecil */
     padding: 10px; /* Mengurangi padding di perangkat kecil */
   }
 
@@ -205,6 +205,6 @@ h1 {
   }
 
   .footer-text {
-    font-size: 0.8rem; /* Mengurangi ukuran font footer di perangkat kecil */
+    font-size: 0.7rem; /* Mengurangi ukuran font footer di perangkat kecil */
   }
 }
