@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Orbitron", sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  background: black; /* Background untuk memastikan tampilan */
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  border-radius: 0; /* Ubah sesuai keinginan jika radius diperlukan */
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(45, 0, 90, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(138, 43, 226, 0.5);
+  max-width: 90%;
+  width: 500px;
+  margin: 0 auto;
+  opacity: 0; /* Mulai dengan opacity 0 untuk animasi masuk */
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.logo {
+  width: 50%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid #ff00ff;
+  position: relative;
+  animation: pulse 2s infinite; /* Animasi pulsasi untuk logo */
+}
+
+.logo::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid rgba(230, 0, 255, 0.7);
+  box-shadow: 0 0 15px rgba(230, 0, 255, 0.8);
+  opacity: 0.5;
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  color: #e600ff;
+  text-shadow: 0 0 8px rgba(230, 0, 255, 0.8), 0 0 15px rgba(230, 0, 255, 0.5);
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Jarak antar tombol */
+}
+
+.link {
+  text-decoration: none;
+  background-color: rgba(51, 0, 102, 0.8);
+  color: #e600ff;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 2px solid #ff00ff;
+  box-shadow: 0 0 10px rgba(230, 0, 255, 0.5), 0 0 15px rgba(230, 0, 255, 0.3);
+  transform: translateX(-20px); /* Mulai dari kiri */
+  opacity: 0; /* Mulai dengan opacity 0 */
+  animation: slideInLeft 0.5s ease-out forwards; /* Animasi masuk dari kiri */
+}
+
+.link:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.link:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.link:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.link:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.link:nth-child(5) {
+  animation-delay: 1s;
+}
+.link:nth-child(6) {
+  animation-delay: 1.2s;
+}
+
+.link:hover {
+  background-color: #e600ff;
+  color: #333;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 0 20px rgba(230, 0, 255, 0.8), 0 0 30px rgba(230, 0, 255, 0.6);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 8px rgba(230, 0, 255, 0.8), 0 0 15px rgba(230, 0, 255, 0.5);
+  }
+  to {
+    text-shadow: 0 0 15px rgba(230, 0, 255, 1), 0 0 25px rgba(230, 0, 255, 0.8);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    width: 90%;
+  }
+
+  .logo {
+    width: 40%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .link {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+}
