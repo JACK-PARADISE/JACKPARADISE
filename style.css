@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Orbitron', sans-serif;
+  font-family: "Orbitron", sans-serif;
   color: white;
   display: flex;
   flex-direction: column;
@@ -63,7 +63,7 @@ video {
 }
 
 .logo::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -10px;
   left: -10px;
@@ -110,12 +110,24 @@ h1 {
   animation: slideInLeft 0.5s ease-out forwards;
 }
 
-.link:nth-child(1) { animation-delay: 0.2s; }
-.link:nth-child(2) { animation-delay: 0.4s; }
-.link:nth-child(3) { animation-delay: 0.6s; }
-.link:nth-child(4) { animation-delay: 0.8s; }
-.link:nth-child(5) { animation-delay: 1s; }
-.link:nth-child(6) { animation-delay: 1.2s; }
+.link:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.link:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.link:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.link:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.link:nth-child(5) {
+  animation-delay: 1s;
+}
+.link:nth-child(6) {
+  animation-delay: 1.2s;
+}
 
 .link:hover {
   background-color: #e600ff;
@@ -143,16 +155,87 @@ h1 {
   margin: 10px 0;
 }
 
-.bottom-image {
-  width: 100%;
+.instagram-highlights {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
-.bottom-image img {
+.instagram-highlights h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #e600ff;
+  text-shadow: 0 0 8px rgba(230, 0, 255, 0.8), 0 0 15px rgba(230, 0, 255, 0.5);
+}
+.vip-info {
+  margin: 10px 0; /* Menambahkan jarak vertikal 20px di atas dan bawah teks */
+  padding: 5px; /* Opsional: menambahkan ruang di dalam elemen */
+  text-align: center; /* Agar teks berada di tengah */
+}
+.benefit-title {
+  margin: 10px 0; /* Menambahkan jarak vertikal di atas dan bawah teks */
+  padding: 10px; /* Opsional: menambahkan ruang di dalam elemen */
+  text-align: center; /* Agar teks berada di tengah */
+  font-size: 1.8rem; /* Ukuran font jika perlu disesuaikan */
+  letter-spacing: 2px; /* Menambahkan spasi antar huruf */
+}
+.vip-benefits {
+  text-align: left;
+  margin-left: 20px; /* Opsional: tambahkan jarak kiri untuk indentasi */
+  list-style-type: disc; /* Pilihan: bisa menambahkan bullet list */
+  padding-left: 20px; /* Untuk memberikan jarak dari tepi */
+}
+
+.vip-benefits li {
+  margin-bottom: 10px; /* Opsional: jarak antar item */
+}
+
+.highlights-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.highlight-link {
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transition: all 0.3s ease;
+  border: 2px solid #e600ff; /* Warna border ungu */
+}
+
+.highlight-img {
   width: 100%;
-  height: auto;
-  border-radius: 0 0 15px 15px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.highlight-link::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(230, 0, 255, 0.8); /* Cahaya di sekitar */
+  opacity: 0;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.highlight-link:hover::before {
+  opacity: 1; /* Cahaya muncul saat hover */
+}
+
+.highlight-link:active {
+  transform: scale(0.95); /* Efek mengecil saat diklik */
+  box-shadow: 0 0 30px rgba(230, 0, 255, 0.8); /* Meningkatkan efek cahaya saat diklik */
 }
 
 /* Animasi */
